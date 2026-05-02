@@ -99,11 +99,11 @@ export class AppComponent implements OnInit, OnDestroy {
   @HostListener('document:click')
   onDocumentClick() {
     this.showUserDropdown = false;
+    this.resetSessionTimer();
   }
 
   @HostListener('document:mousemove')
   @HostListener('document:keypress')
-  @HostListener('document:click')
   resetSessionTimer() {
     if (this.isBrowser && !this.isLoginPage()) {
       this.clearSessionTimer();
