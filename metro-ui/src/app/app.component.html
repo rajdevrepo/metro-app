@@ -15,7 +15,7 @@
             <span class="notification-badge">3</span>
           </div>
           <div class="nav-divider"></div>
-          <div class="user-info" [class.show-dropdown]="showUserDropdown" (click)="toggleUserDropdown()">
+          <div class="user-info" [class.show-dropdown]="showUserDropdown" (click)="toggleUserDropdown($event)">
             <div class="user-avatar">
               <i class="fas fa-user-circle"></i>
             </div>
@@ -24,7 +24,7 @@
               <span class="user-role">Administrator</span>
             </div>
             <i class="fas fa-chevron-down dropdown-arrow"></i>
-            <div class="user-dropdown" *ngIf="showUserDropdown">
+            <div class="user-dropdown" *ngIf="showUserDropdown" (click)="$event.stopPropagation()">
               <a class="dropdown-item" routerLink="/settings/profile">
                 <i class="fas fa-user"></i> My Profile
               </a>

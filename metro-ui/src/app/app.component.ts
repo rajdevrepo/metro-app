@@ -1,5 +1,5 @@
 import { Component, Inject, PLATFORM_ID, ChangeDetectorRef, NgZone, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from "@angular/common/http";
 import { AgGridAngular } from "ag-grid-angular";
@@ -81,7 +81,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.activeMenu = menu;
   }
 
-  toggleUserDropdown() {
+  toggleUserDropdown(event: Event) {
+    event.stopPropagation();
     this.showUserDropdown = !this.showUserDropdown;
   }
 
@@ -95,12 +96,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.navigate(['/login']);
   }
 
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: Event) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.user-info')) {
-      this.showUserDropdown = false;
-    }
+  @HostListener('document:click')
+  onDocumentClick() {
+    this.showUserDropdown = false;
   }
 
   @HostListener('document:mousemove')
@@ -133,6 +131,12 @@ export class AppComponent implements OnInit, OnDestroy {
         this.loading = isLoading;
         this.cdRef.detectChanges();
       });
+    });
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.showUserDropdown = false;
+      }
     });
 
     if (this.isBrowser) {
