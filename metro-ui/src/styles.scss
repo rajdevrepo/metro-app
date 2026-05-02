@@ -1,20 +1,178 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 html, body {
-  font-family: sans-serif;
-  line-height: 1.15;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-/*html, body { height: 100%; }*/
-/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
-body {
+  height: 100%;
   margin: 0;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-size: 0.925rem;
   font-weight: 400;
-  line-height: 1.5;
-  color: #858796;
-  text-align: left;
-  background-color: #fff;
+  color: #4a5568;
+  background-color: #f0f2f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0077b6;
+  text-decoration: none;
+  transition: color 0.2s;
+  &:hover {
+    color: #005f8a;
+  }
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+
+  .breadcrumb-item a {
+    color: #0077b6;
+    font-weight: 500;
+  }
+
+  .breadcrumb-item.active {
+    color: #6c757d;
+    font-weight: 500;
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #1a365d;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+    outline: none;
+  }
+}
+
+.form-select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+    outline: none;
+  }
+}
+
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0077b6, #00a8e8);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 119, 182, 0.3);
+
+  &:hover {
+    background: linear-gradient(135deg, #005f8a, #0090c7);
+    box-shadow: 0 4px 8px rgba(0, 119, 182, 0.35);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #0077b6, #00a8e8);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 119, 182, 0.3);
+
+  &:hover {
+    background: linear-gradient(135deg, #005f8a, #0090c7);
+    box-shadow: 0 4px 8px rgba(0, 119, 182, 0.35);
+  }
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #2f855a, #38a169);
+  border: none;
+  box-shadow: 0 2px 4px rgba(47, 133, 90, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #c53030, #e53e3e);
+  border: none;
+  box-shadow: 0 2px 4px rgba(197, 48, 48, 0.3);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #d69e2e, #ecc94b);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(214, 158, 46, 0.3);
+}
+
+hr.hr-blurry {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #cbd5e0, transparent);
+  margin: 1rem 0;
+}
+
+.ag-theme-alpine {
+  --ag-border-radius: 0.5rem;
+  --ag-header-background-color: #f7fafc;
+  --ag-odd-row-background-color: #fafbfc;
+  --ag-row-hover-color: #ebf8ff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 3px;
+  &:hover {
+    background: #a0a0a0;
+  }
 }

@@ -1,50 +1,11 @@
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center; // Light background
-
-  .loader-svg {
-    width: 80px;
-    height: 80px;
-  }
-
-  .track {
-    fill: none;
-    stroke: #005bac; // CMRL Blue
-    stroke-width: 5;
-  }
-
-  .train {
-    fill: #fdb913; // CMRL Yellow
-    animation: moveTrain 1s linear infinite;
-  }
-
-  .cmrl-text {
-    font-size: 12px;
-    font-weight: bold;
-    text-anchor: middle;
-    fill: #005bac;
-  }
-}
-
-// Train movement along the circular track
-@keyframes moveTrain {
-  0% {
-    transform: rotate(0deg) translate(0, -40px) rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg) translate(0, -40px) rotate(-360deg);
-  }
-}
-
 .cmrl-loader-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); // Dark overlay for better visibility
+  background: rgba(0, 47, 75, 0.6);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,67 +13,70 @@
 }
 
 .cmrl-loader {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 
-  img {
-    width: 100%;
-    height: auto;
-    animation: cmrlSpin 1.5s linear infinite, cmrlPulse 1.5s ease-in-out infinite;
-  }
-
-  svg {
-    width: 100%;
-    height: auto;
-    animation: cmrlSpin 1.5s linear infinite, cmrlPulse 1.5s ease-in-out infinite;
-  }
-
   &::before {
     content: "";
     position: absolute;
-    width: 150px;
-    height: 150px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+    width: 160px;
+    height: 160px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-top-color: #00a8e8;
     border-radius: 50%;
-    animation: cmrlOuterSpin 2s linear infinite;
+    animation: cmrlOuterSpin 1.5s linear infinite;
   }
 }
 
-// Rotating effect
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader-svg {
+    width: 100px;
+    height: 100px;
+    animation: cmrlSpin 2s linear infinite;
+  }
+
+  .track {
+    fill: none;
+    stroke: #0077b6;
+    stroke-width: 4;
+    opacity: 0.4;
+  }
+
+  .train {
+    fill: #00a8e8;
+    filter: drop-shadow(0 0 4px rgba(0, 168, 232, 0.6));
+  }
+
+  .cmrl-text {
+    font-size: 14px;
+    font-weight: 700;
+    text-anchor: middle;
+    fill: #fff;
+    letter-spacing: 2px;
+  }
+
+  .cmrl-subtext {
+    font-size: 7px;
+    text-anchor: middle;
+    fill: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+  }
+}
+
 @keyframes cmrlSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-// Pulsing effect
-@keyframes cmrlPulse {
-  0%, 100% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-
-// Outer rotating ring effect
 @keyframes cmrlOuterSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }

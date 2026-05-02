@@ -8,11 +8,11 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class SideNavComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
-  isSidebarExpanded: boolean = false; // Add this line
+  isSidebarExpanded: boolean = false;
   menuItems = [
     {
       title: 'Dashboard',
-      icon: 'fas fa-area-chart',
+      icon: 'fas fa-tachometer-alt',
       route: '/dashboard',
       collapsible: false,
       expanded: false,
@@ -20,15 +20,23 @@ export class SideNavComponent {
     },
     {
       title: 'Request Management',
-      icon: 'fas fa-list-check',
+      icon: 'fas fa-clipboard-list',
       expanded: false,
       route: '',
       collapsible: true,
       submenu: [
         { title: 'New Request', icon: 'fas fa-plus-circle', route: '/add-new' },
         { title: 'Pending Approval', icon: 'fas fa-hourglass-half', route: '/pending-approval' },
-        { title: 'Approved List', icon: 'fas fa-check-circle', route: '/approved-list' } 
+        { title: 'Approved List', icon: 'fas fa-check-circle', route: '/approved-list' }
       ]
+    },
+    {
+      title: 'Work Completion',
+      icon: 'fas fa-tasks',
+      route: '/work-completion',
+      collapsible: false,
+      expanded: false,
+      submenu: []
     },
     {
       title: 'Settings',
@@ -45,8 +53,8 @@ export class SideNavComponent {
 
 
   ngOnInit() {
-    if (localStorage.getItem('sidebarState')) { localStorage.removeItem('sidebarState'); }
     if (isPlatformBrowser(this.platformId)) {
+      if (localStorage.getItem('sidebarState')) { localStorage.removeItem('sidebarState'); }
       this.loadMenuState();
     }
   }
@@ -54,18 +62,21 @@ export class SideNavComponent {
     item.expanded = !item.expanded;
     this.saveMenuState();
   }
-  toggleSidebar() { // Add this function
+  toggleSidebar() {
     this.isSidebarExpanded = !this.isSidebarExpanded;
-
   }
   saveMenuState() {
-    localStorage.setItem('sidebarState', JSON.stringify(this.menuItems));
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('sidebarState', JSON.stringify(this.menuItems));
+    }
   }
 
   loadMenuState() {
-    const savedState = localStorage.getItem('sidebarState');
-    if (savedState) {
-      //this.menuItems = JSON.parse(savedState);
+    if (isPlatformBrowser(this.platformId)) {
+      const savedState = localStorage.getItem('sidebarState');
+      if (savedState) {
+        //this.menuItems = JSON.parse(savedState);
+      }
     }
   }
 }

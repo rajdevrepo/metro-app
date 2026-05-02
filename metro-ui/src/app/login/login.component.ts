@@ -22,10 +22,11 @@ export class LoginComponent extends UnSub implements OnInit {
       return;
     }
     let model = {
-      UserName:'rajmalar21@gmail.com'
+      UserName: this.loginForm.controls['username'].value
     }
     this.accountService.getuser(model).pipe(takeUntil(this.unsubscribe$))
       .subscribe((data) => {
+        localStorage.setItem('loginUser', this.loginForm.controls['username'].value);
         this.router.navigate(['/dashboard']);
       })
   }

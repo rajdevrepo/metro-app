@@ -1,17 +1,11 @@
-
 <div class="cmrl-loader-overlay" *ngIf="isLoading">
   <div class="cmrl-loader">
-    <!--<img src="assets/images/metro_logo.png" alt="CMRL Loader">-->
     <div class="loader-container">
       <svg class="loader-svg" viewBox="0 0 100 100">
-        Circular Metro Track
         <circle cx="50" cy="50" r="40" class="track"></circle>
-
-        Moving Train
-        <circle cx="50" cy="50" r="6" class="train"></circle>
-
-        CMRL Branding Text
-        <text x="50" y="55" class="cmrl-text">CMRL</text>
+        <circle cx="50" cy="10" r="6" class="train"></circle>
+        <text x="50" y="50" class="cmrl-text">CMRL</text>
+        <text x="50" y="62" class="cmrl-subtext">Loading...</text>
       </svg>
     </div>
   </div>
