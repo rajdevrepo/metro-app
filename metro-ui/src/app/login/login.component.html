@@ -1,0 +1,43 @@
+<div class="bg-image" style="height: 98vh; width: 99.3vw; position: absolute; background-image: url(/assets/images/4-chennai-metro.jpg);margin:5.5px;border-radius:5px">
+  <div class="container justify-content-center card login-container" style="width:55%;margin-top:13%;margin-right:10%;">
+    <div class="row justify-content-between" style="background-color: #fbfbfb; border-radius: 10px;">
+      <div class="col mt-2" style="margin-left:0 !important;">
+        <figure class="figure" style="margin: 0 0 0.1rem !important;">
+          <img src="/assets/images/cmrl_logo3.webp"
+               class="figure-img img-fluid rounded shadow-3"
+               alt="..." />
+        </figure>
+      </div>
+      <div class="col justify-content-start align-self-center">
+        <div class="col-md-4 offset-md-4 mb-4">Welcome Back!</div>
+
+        <!-- Email input -->
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="email" id="form1Example1" class="form-control" [formControl]="$any(loginForm.controls['username'])" required />
+          <label mdbLabel class="form-label" for="form1Example1">User Name/Email address</label>
+          <mdb-error *ngIf="(loginForm.controls['username']?.touched || isformValid)&& ( loginForm.controls['username'].errors?.['required'])">
+            User Name is required
+          </mdb-error>
+        </mdb-form-control>
+
+        <!-- Password input -->
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="password" id="form1Example2" class="form-control" [formControl]="$any(loginForm.controls['password'])" required />
+          <label mdbLabel class="form-label" for="form1Example2">Password</label>
+          <mdb-error style="margin-bottom:2px;" *ngIf="(loginForm.controls['password']?.touched || isformValid)&& ( loginForm.controls['password'].errors?.['required'])">
+            Password is required
+          </mdb-error>
+        </mdb-form-control>
+
+        <!-- Submit button -->
+        <button mdbRipple type="button" style="width:100%;" class="btn btn-info btn-rounded" (click)="getlogindetls()">Sign in</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

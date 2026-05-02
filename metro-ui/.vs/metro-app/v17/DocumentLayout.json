@@ -1,0 +1,542 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\account.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\_services\\account.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\pending-approval\\pending-approval.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\pending-approval\\pending-approval.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\request-approval\\request-approval.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\request-approval\\request-approval.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\add-new\\add-new.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\request-approval\\request-approval.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\request-approval\\request-approval.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\custom-modal\\custom-modal.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\custom-modal\\custom-modal.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\approved-list\\approved-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\approved-list\\approved-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\custom-modal\\custom-modal.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\dashboard\\dashboard.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\dashboard\\dashboard.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\side-nav\\side-nav.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\side-nav\\side-nav.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\side-nav\\side-nav.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\login\\login.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\approved-list\\approved-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\approved-list\\approved-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\pending-approval\\pending-approval.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\pending-approval\\pending-approval.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\add-new\\add-new.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\dashboard\\dashboard.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\login\\login.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\login\\login.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\loader.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\_services\\loader.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\loader\\loader.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\interceptor.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\_services\\interceptor.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\loader\\loader.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\common\\loader\\loader.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\request-management\\add-new\\add-new.component.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "custom-modal.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\common\\custom-modal\\custom-modal.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.scss",
+              "RelativeToolTip": "src\\app\\common\\custom-modal\\custom-modal.component.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-03-11T12:22:51.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "custom-modal.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.html",
+              "RelativeDocumentMoniker": "src\\app\\common\\custom-modal\\custom-modal.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.html",
+              "RelativeToolTip": "src\\app\\common\\custom-modal\\custom-modal.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-11T12:19:59.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "custom-modal.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\custom-modal\\custom-modal.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\custom-modal\\custom-modal.component.ts",
+              "RelativeToolTip": "src\\app\\common\\custom-modal\\custom-modal.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-11T12:19:16.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pending-approval.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\pending-approval\\pending-approval.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\pending-approval\\pending-approval.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\pending-approval\\pending-approval.component.ts",
+              "RelativeToolTip": "src\\app\\request-management\\pending-approval\\pending-approval.component.ts",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACkAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-11T11:19:48.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "add-new.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\add-new\\add-new.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.ts",
+              "RelativeToolTip": "src\\app\\request-management\\add-new\\add-new.component.ts",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-02-26T15:56:23.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "request-approval.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\request-approval\\request-approval.component.html",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\request-approval\\request-approval.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\request-approval\\request-approval.component.html",
+              "RelativeToolTip": "src\\app\\request-management\\request-approval\\request-approval.component.html",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAKoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-02T04:45:09.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "account.service.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\account.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\_services\\account.service.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\account.service.ts",
+              "RelativeToolTip": "src\\app\\_services\\account.service.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-02-23T15:42:04.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "request-approval.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\request-approval\\request-approval.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\request-approval\\request-approval.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\request-approval\\request-approval.component.ts",
+              "RelativeToolTip": "src\\app\\request-management\\request-approval\\request-approval.component.ts",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAF4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-11T12:49:01.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "approved-list.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\approved-list\\approved-list.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\approved-list\\approved-list.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\approved-list\\approved-list.component.ts",
+              "RelativeToolTip": "src\\app\\request-management\\approved-list\\approved-list.component.ts",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-09T15:24:31.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dashboard.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\dashboard\\dashboard.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.ts",
+              "RelativeToolTip": "src\\app\\common\\dashboard\\dashboard.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-11T10:18:57.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "dashboard.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.html",
+              "RelativeDocumentMoniker": "src\\app\\common\\dashboard\\dashboard.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.html",
+              "RelativeToolTip": "src\\app\\common\\dashboard\\dashboard.component.html",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABIAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-08T14:57:56.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.module.ts",
+              "RelativeToolTip": "src\\app\\app.module.ts",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-09T15:28:33.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "app.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.html",
+              "RelativeDocumentMoniker": "src\\app\\app.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.html",
+              "RelativeToolTip": "src\\app\\app.component.html",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-19T01:27:22.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "side-nav.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\side-nav\\side-nav.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.ts",
+              "RelativeToolTip": "src\\app\\common\\side-nav\\side-nav.component.ts",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-06T15:59:25.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\index.html",
+              "RelativeDocumentMoniker": "src\\index.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\index.html",
+              "RelativeToolTip": "src\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-11T06:35:53.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "side-nav.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.html",
+              "RelativeDocumentMoniker": "src\\app\\common\\side-nav\\side-nav.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.html",
+              "RelativeToolTip": "src\\app\\common\\side-nav\\side-nav.component.html",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-06T15:59:48.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "side-nav.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\common\\side-nav\\side-nav.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\side-nav\\side-nav.component.scss",
+              "RelativeToolTip": "src\\app\\common\\side-nav\\side-nav.component.scss",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAcwG0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-03-06T16:01:27.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "login.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.html",
+              "RelativeDocumentMoniker": "src\\app\\login\\login.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.html",
+              "RelativeToolTip": "src\\app\\login\\login.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-09T13:25:24.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "app.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\app.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.scss",
+              "RelativeToolTip": "src\\app\\app.component.scss",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAswHcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-02-24T14:53:50.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\app.component.ts",
+              "RelativeToolTip": "src\\app\\app.component.ts",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-02-19T01:27:12.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "approved-list.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\approved-list\\approved-list.component.html",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\approved-list\\approved-list.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\approved-list\\approved-list.component.html",
+              "RelativeToolTip": "src\\app\\request-management\\approved-list\\approved-list.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-09T15:26:39.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "pending-approval.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\pending-approval\\pending-approval.component.html",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\pending-approval\\pending-approval.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\pending-approval\\pending-approval.component.html",
+              "RelativeToolTip": "src\\app\\request-management\\pending-approval\\pending-approval.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-27T14:32:02.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "add-new.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.html",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\add-new\\add-new.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.html",
+              "RelativeToolTip": "src\\app\\request-management\\add-new\\add-new.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-26T15:42:23.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "dashboard.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\common\\dashboard\\dashboard.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\dashboard\\dashboard.component.scss",
+              "RelativeToolTip": "src\\app\\common\\dashboard\\dashboard.component.scss",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAswKkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-03-08T14:47:02.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "login.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\login\\login.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.ts",
+              "RelativeToolTip": "src\\app\\login\\login.component.ts",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwCIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-06T10:40:30.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "loader.component.html",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.html",
+              "RelativeDocumentMoniker": "src\\app\\common\\loader\\loader.component.html",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.html",
+              "RelativeToolTip": "src\\app\\common\\loader\\loader.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-05T15:09:49.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "loader.component.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\loader\\loader.component.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.ts",
+              "RelativeToolTip": "src\\app\\common\\loader\\loader.component.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-05T15:33:31.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "loader.service.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\loader.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\_services\\loader.service.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\loader.service.ts",
+              "RelativeToolTip": "src\\app\\_services\\loader.service.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-05T15:35:56.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "interceptor.service.ts",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\interceptor.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\_services\\interceptor.service.ts",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\_services\\interceptor.service.ts",
+              "RelativeToolTip": "src\\app\\_services\\interceptor.service.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-03-05T15:41:41.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "login.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\login\\login.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\login\\login.component.scss",
+              "RelativeToolTip": "src\\app\\login\\login.component.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-03-06T08:02:43.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "loader.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\common\\loader\\loader.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\common\\loader\\loader.component.scss",
+              "RelativeToolTip": "src\\app\\common\\loader\\loader.component.scss",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-03-05T15:10:23.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "add-new.component.scss",
+              "DocumentMoniker": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.scss",
+              "RelativeDocumentMoniker": "src\\app\\request-management\\add-new\\add-new.component.scss",
+              "ToolTip": "C:\\Users\\vaith\\Documents\\Angular Project\\metro-app\\src\\app\\request-management\\add-new\\add-new.component.scss",
+              "RelativeToolTip": "src\\app\\request-management\\add-new\\add-new.component.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2025-02-26T16:17:10.056Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

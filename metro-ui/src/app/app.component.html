@@ -1,0 +1,73 @@
+<div *ngIf="!isLoginPage()">
+  <!--<app-header></app-header>--> <!-- Navbar/Header -->
+  <!--<app-sidebar></app-sidebar>--> <!-- Sidebar -->
+  <div class="wrapper">
+    <!-- Sidebar -->    
+    <!--<nav id="sidebar" [class.active]="isSidebarOpen">
+      <div class="sidebar-header">
+        <h3>My Dashboard</h3>
+        <button (click)="toggleSidebar()">☰</button>
+      </div>
+      <ul class="list-unstyled components">
+        <li [class.active]="activeMenu === 'home'" (click)="setActiveMenu('home')">
+          <a routerLink="/">🏠 Home</a>
+        </li>
+        <li>
+          <a href="#" (click)="toggleSubMenu('dashboard')">📊 Dashboard</a>
+          <ul [class.show]="expandedMenus['dashboard']">
+            <li [class.active]="activeMenu === 'analytics'" (click)="setActiveMenu('analytics')">
+              <a routerLink="/analytics">📈 Analytics</a>
+            </li>
+            <li [class.active]="activeMenu === 'reports'" (click)="setActiveMenu('reports')">
+              <a routerLink="/reports">📄 Reports</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a (click)="toggleSubMenu('settings')">⚙️ Settings</a>
+          <ul [class.show]="expandedMenus['settings']">
+            <li [class.active]="activeMenu === 'profile'" (click)="setActiveMenu('profile')">
+              <a routerLink="/add-new">👤 Profile</a>
+            </li>
+            <li [class.active]="activeMenu === 'preferences'" (click)="setActiveMenu('preferences')">
+              <a routerLink="/preferences">🔧 Preferences</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>-->
+    <app-side-nav></app-side-nav>
+    <!-- Content -->
+    <div id="content" style="background-color: #f6f8fa !important; ">
+      <!-- Top Navigation Bar -->
+      <nav class="top-navbar">
+        <!--<button class="menu-toggle" (click)="toggleSidebar()">☰</button>-->
+        <div class="col-3">
+          <label class="visually-hidden" for="inlineFormInputGroupUsername">Serach for</label>
+          <div class="input-group">
+            <input type="text"
+                   class="form-control"
+                   id="inlineFormInputGroupUsername"
+                   placeholder="Search for" />
+            <div class="input-group-text btn-sm" style="background-color: #3b71ca; box-shadow: 0 4px 9px -4px #3b71ca; color: #fff; box-shadow-state: 0 8px 9px -4px rgba(59, 113, 202, 0.3), 0 4px 18px 0 rgba(59, 113, 202, 0.2); "><i class="fas fa-search"></i></div>
+          </div>
+        </div>
+        <div class="nav-icons">
+          <i class="fas fa-bell fa-4x"></i>
+          <i class="fas fa-user-circle fa-10x"></i>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <div class="main-content" style="padding:10px;">
+        <app-loader [isLoading]="loading"></app-loader>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoginPage()">
+  <app-login></app-login>
+</div>
+
+

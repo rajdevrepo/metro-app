@@ -1,0 +1,94 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+    <!--<li class="breadcrumb-item active" aria-current="page">New Request</li>-->
+  </ol>
+</nav>
+<div class="card mt-1">
+  <div class="card-body">
+    <div class="row" *ngIf="countData">
+      <!-- Total -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                  Total
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{countData.Pending+countData.Approved+countData.Rejected}}</div>
+              </div>
+              <div class="btn btn-primary btn-circle">
+                <i class="fas fa-laugh-wink"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pending -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                  Pending Requests
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  <a class="small-box-footer">{{countData.Pending}}</a>
+                </div>
+              </div>
+              <div class="btn btn-warning btn-circle">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Approved -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                  Approved
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  <a class="small-box-footer">{{countData.Approved}}</a>
+                </div>
+              </div>
+              <div class="btn btn-success btn-circle">
+                <i class="fas fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rejected -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-danger shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                  Rejected
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  <a class="small-box-footer">{{countData.Rejected}}</a>
+                </div>
+              </div>
+              <div class="btn btn-danger btn-circle">
+                <i class="fa fa-times text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

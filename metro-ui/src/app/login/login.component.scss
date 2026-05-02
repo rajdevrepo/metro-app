@@ -1,0 +1,26 @@
+.center {
+  display: flex;
+  justify-content: center; // Centers horizontally
+  align-items: center; // Centers vertically
+  height: 100vh; // Full viewport height
+}
+.card {
+  border: 1px solid #e7eaee;
+  border-radius: 10px;
+  box-shadow: 0px 8px 24px rgba(27, 46, 94, 0.08);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container {
+  animation: fadeInUp 0.6s ease-in-out;
+}

@@ -1,0 +1,174 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">New Request</li>
+  </ol>
+</nav>
+<div class="card mt-1">
+  <div class="card-body">
+    <h6 class="card-title">Station Information</h6>
+    <div class="row">
+      <div class="col-4">
+        <div class="form-outline">
+          <select class="form-select" mdbInput mdbValidate [formControl]="$any(newrequestForm.controls['StattionName'])">
+            <option value="" disabled selected>Choose station name</option> <!-- Empty option for floating effect -->
+            <option *ngFor="let item of stationlist" [value]="item.StationID">{{item.StationName}}</option>
+          </select>
+          <mdb-error *ngIf="(newrequestForm.controls['StattionName']?.touched || isformValid) && ( newrequestForm.controls['StattionName'].errors?.['required'])">
+            StattionName is required
+          </mdb-error>
+        </div>
+      </div>
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput [formControl]="$any(newrequestForm.controls['WorkDate'])" type="date" name="WorkDate" class="form-control"
+                 />
+          <label mdbLabel class="form-label" for="form1Example1">Work Date</label>
+          <mdb-error *ngIf="(newrequestForm.controls['WorkDate']?.touched || isformValid)&& ( newrequestForm.controls['WorkDate'].errors?.['required'])">
+            Work Date is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+    </div>
+    <hr class="hr hr-blurry" />
+    <h6 class="card-title">Requester Information</h6>
+    <div class="row">
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" [formControl]="$any(newrequestForm.controls['EmployeeName'])" name="EmployeeName" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Name</label>
+          <mdb-error *ngIf="(newrequestForm.controls['EmployeeName']?.touched || isformValid) && ( newrequestForm.controls['EmployeeName'].errors?.['required'])">
+            Employee Name is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" [formControl]="$any(newrequestForm.controls['EmployeeCode'])" name="EmployeeCode" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Employee Code</label>
+          <mdb-error *ngIf="(newrequestForm.controls['EmployeeCode']?.touched || isformValid) && ( newrequestForm.controls['EmployeeCode'].errors?.['required'])">
+            Employee Code is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" [formControl]="$any(newrequestForm.controls['Designation'])" name="Designation" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Designation</label>
+          <mdb-error *ngIf="newrequestForm.controls['Designation']?.touched && ( newrequestForm.controls['Designation'].errors?.['required'])">
+            Designation is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" [formControl]="$any(newrequestForm.controls['Department'])" name="Department" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Department</label>
+          <mdb-error *ngIf="(newrequestForm.controls['Department']?.touched || isformValid) && ( newrequestForm.controls['Department'].errors?.['required'])">
+            Department is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-2">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="number" [formControl]="$any(newrequestForm.controls['HoursFrom'])" name="HoursFrom" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Hours From</label>
+          <mdb-error *ngIf="(newrequestForm.controls['HoursFrom']?.touched || isformValid) && ( newrequestForm.controls['HoursFrom'].errors?.['required'])">
+            Hours From is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-2">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="number" [formControl]="$any(newrequestForm.controls['HoursTo'])" name="HoursTo" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Hours To</label>
+          <mdb-error *ngIf="(newrequestForm.controls['HoursTo']?.touched || isformValid) && ( newrequestForm.controls['HoursTo'].errors?.['required'])">
+            HoursTo is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="number" [formControl]="$any(newrequestForm.controls['NooOfCMRLStaff'])" name="NooOfCMRLStaff" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">No.Of CMRL Staff</label>
+          <mdb-error *ngIf="(newrequestForm.controls['NooOfCMRLStaff']?.touched || isformValid) && ( newrequestForm.controls['NooOfCMRLStaff'].errors?.['required'])">
+            No.Of CMRL Staff is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="number" [formControl]="$any(newrequestForm.controls['NooOfContratStaff'])" name="NooOfContratStaff" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">No.Of Contractor Staff</label>
+          <mdb-error *ngIf="(newrequestForm.controls['NooOfContratStaff']?.touched || isformValid) && ( newrequestForm.controls['NooOfContratStaff'].errors?.['required'])">
+            No.Of Contractor Staff is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" [formControl]="$any(newrequestForm.controls['Designation'])" id="form1Example1" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Designation</label>
+          <mdb-error *ngIf="newrequestForm.controls['Designation']?.touched && ( newrequestForm.controls['Designation'].errors?.['required'])">
+            Designation is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+      <div class="col-4">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" [formControl]="$any(newrequestForm.controls['ContactNo'])" name="ContactNo" class="form-control" />
+          <label mdbLabel class="form-label" for="form1Example1">Contact Number</label>
+          <mdb-error *ngIf="newrequestForm.controls['ContactNo']?.touched && ( newrequestForm.controls['ContactNo'].errors?.['required'])">
+            Contact Number is required
+          </mdb-error>
+        </mdb-form-control>
+      </div>
+    </div>
+    <div>
+      <div class="form-check form-check-inline">
+        <input mdbRadio [formControl]="$any(newrequestForm.controls['RequiredPermission'])"
+               class="form-check-input"
+               type="radio"
+               name="inlineRadioOptions"
+               id="inlineRadio1"
+               value="Inspect" />
+        <label class="form-check-label" for="inlineRadio1">Inspect</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input mdbRadio [formControl]="$any(newrequestForm.controls['RequiredPermission'])"
+               class="form-check-input"
+               type="radio"
+               name="inlineRadioOptions"
+               id="inlineRadio2"
+               value="Maintain The Area" />
+        <label class="form-check-label" for="inlineRadio2">Maintain The Area</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input mdbRadio [formControl]="$any(newrequestForm.controls['RequiredPermission'])"
+               class="form-check-input"
+               type="radio"
+               name="inlineRadioOptions"
+               id="inlineRadio3"
+               value="Equipment" />
+        <label class="form-check-label" for="inlineRadio3">Equipment</label>
+        <mdb-error *ngIf="(newrequestForm.controls['RequiredPermission']?.touched || isformValid) && ( newrequestForm.controls['RequiredPermission'].errors?.['required'])">
+          Reason is required
+        </mdb-error>
+      </div>     
+    </div>
+    <hr class="hr hr-blurry" />
+    <div class="text-center">
+      <div>
+        <button type="button" class="btn btn-warning btn-rounded" style="margin-right:20px;" (click)="initializeForm()" mdbRipple>Cancel</button>
+        <button type="button" class="btn btn-info btn-rounded" mdbRipple (click)="formSubmit()">Submit</button>
+      </div>     
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,43 @@
+<!--<nav class="sidebar" [class.expanded]="isSidebarExpanded">
+  <ul class="menu">
+    <li *ngFor="let item of menuItems" class="menu-item">
+      <div class="menu-title" (click)="toggleSubMenu(item)">
+        <i [class]="item.icon"></i>
+        <span>{{ item.title }}</span>
+        <i class="arrow" [class.rotate]="item.expanded"></i>
+      </div>
+      <ul class="submenu" *ngIf="item.expanded">
+        <li *ngFor="let sub of item.submenu">
+          <i [class]="sub.icon"></i>
+          <a [routerLink]="sub.route">{{ sub.title }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>-->
+<nav class="sidebar" [class.expanded]="isSidebarExpanded">
+  <div class="d-flex justify-content-between divider">
+    <div class="image-container">
+      <img src="/assets/images/sidebar_logo.png"
+           alt="..." />
+    </div>
+    <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+  </div>
+  
+  <ul class="menu">
+    <li *ngFor="let item of menuItems" class="menu-item">
+      <div class="menu-title" (click)="toggleSubMenu(item)">
+        <i [class]="item.icon"></i>
+        <span *ngIf="!item.collapsible" [routerLink]="item.route" style="padding-right:10px !important;">{{ item.title }}</span>
+        <span *ngIf="item.collapsible" style="padding-right:10px !important;">{{ item.title }}</span>
+        <i *ngIf="item.collapsible" class="arrow fa fa-angle-right" [class.rotate]="item.expanded"></i>
+      </div>
+      <ul class="submenu" *ngIf="item.expanded">
+        <li *ngFor="let sub of item.submenu">
+          <i aria-hidden="true" [class]="sub.icon"></i>
+          <a [routerLink]="sub.route">{{ sub.title }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
