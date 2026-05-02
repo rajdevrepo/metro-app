@@ -36,28 +36,28 @@ export class DashboardComponent extends UnSub implements OnInit {
   }
 
   getPendingDash(): string {
-    const pct = this.countData.Pending / this.getTotal();
+    const pct = (this.countData.Pending || 0) / this.getTotal();
     return `${pct * this.circumference} ${this.circumference}`;
   }
 
   getApprovedDash(): string {
-    const pct = this.countData.Approved / this.getTotal();
+    const pct = (this.countData.Approved || 0) / this.getTotal();
     return `${pct * this.circumference} ${this.circumference}`;
   }
 
   getApprovedOffset(): string {
-    const pendingPct = this.countData.Pending / this.getTotal();
+    const pendingPct = (this.countData.Pending || 0) / this.getTotal();
     return `${-pendingPct * this.circumference}`;
   }
 
   getRejectedDash(): string {
-    const pct = this.countData.Rejected / this.getTotal();
+    const pct = (this.countData.Rejected || 0) / this.getTotal();
     return `${pct * this.circumference} ${this.circumference}`;
   }
 
   getRejectedOffset(): string {
-    const pendingPct = this.countData.Pending / this.getTotal();
-    const approvedPct = this.countData.Approved / this.getTotal();
+    const pendingPct = (this.countData.Pending || 0) / this.getTotal();
+    const approvedPct = (this.countData.Approved || 0) / this.getTotal();
     return `${-(pendingPct + approvedPct) * this.circumference}`;
   }
 }

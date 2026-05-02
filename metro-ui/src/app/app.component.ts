@@ -87,6 +87,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   logout() {
     this.showUserDropdown = false;
+    this.clearSessionTimer();
     if (this.isBrowser) {
       localStorage.removeItem('sidebarState');
       localStorage.removeItem('loginUser');
