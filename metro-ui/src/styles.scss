@@ -216,6 +216,10 @@ label.form-label {
 
 // ── MDB Form Control Integration ──
 mdb-form-control {
+  display: block;
+  position: relative;
+  padding-bottom: 1.25rem;
+
   .form-outline {
     .form-control {
       border: 1.5px solid $border-color;
