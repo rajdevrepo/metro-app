@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+.error-message,
+.success-message {
+  position: relative !important;
+  top: auto !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 html, body {
   font-family: sans-serif;
   line-height: 1.15;

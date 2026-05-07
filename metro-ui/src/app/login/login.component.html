@@ -24,7 +24,7 @@
         <mdb-form-control class="mb-4">
           <input mdbInput type="password" id="form1Example2" class="form-control" [formControl]="$any(loginForm.controls['password'])" required />
           <label mdbLabel class="form-label" for="form1Example2">Password</label>
-          <mdb-error style="margin-bottom:2px;" *ngIf="(loginForm.controls['password']?.touched || isformValid)&& ( loginForm.controls['password'].errors?.['required'])">
+          <mdb-error *ngIf="(loginForm.controls['password']?.touched || isformValid)&& ( loginForm.controls['password'].errors?.['required'])">
             Password is required
           </mdb-error>
         </mdb-form-control>
