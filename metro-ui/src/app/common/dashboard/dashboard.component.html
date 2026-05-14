@@ -1,94 +1,139 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-    <!--<li class="breadcrumb-item active" aria-current="page">New Request</li>-->
   </ol>
 </nav>
-<div class="card mt-1">
-  <div class="card-body">
-    <div class="row" *ngIf="countData">
-      <!-- Total -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                  Total
-                </div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">{{countData.Pending+countData.Approved+countData.Rejected}}</div>
-              </div>
-              <div class="btn btn-primary btn-circle">
-                <i class="fas fa-laugh-wink"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Pending -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-warning shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                  Pending Requests
-                </div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  <a class="small-box-footer">{{countData.Pending}}</a>
-                </div>
-              </div>
-              <div class="btn btn-warning btn-circle">
-                <i class="fas fa-exclamation-triangle"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Approved -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                  Approved
-                </div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  <a class="small-box-footer">{{countData.Approved}}</a>
-                </div>
-              </div>
-              <div class="btn btn-success btn-circle">
-                <i class="fas fa-check"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Rejected -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-danger shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                  Rejected
-                </div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  <a class="small-box-footer">{{countData.Rejected}}</a>
-                </div>
-              </div>
-              <div class="btn btn-danger btn-circle">
-                <i class="fa fa-times text-gray-300"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<div class="dashboard-stats" *ngIf="countData">
+  <div class="stat-card stat-total">
+    <div class="stat-icon">
+      <i class="fas fa-layer-group"></i>
     </div>
+    <div class="stat-info">
+      <span class="stat-label">Total Requests</span>
+      <span class="stat-value">{{ countData.Pending + countData.Approved + countData.Rejected }}</span>
+    </div>
+    <div class="stat-trend">
+      <i class="fas fa-chart-line"></i>
+    </div>
+  </div>
 
+  <div class="stat-card stat-pending">
+    <div class="stat-icon">
+      <i class="fas fa-clock"></i>
+    </div>
+    <div class="stat-info">
+      <span class="stat-label">Pending</span>
+      <span class="stat-value">{{ countData.Pending }}</span>
+    </div>
+    <div class="stat-trend">
+      <i class="fas fa-hourglass-half"></i>
+    </div>
+  </div>
+
+  <div class="stat-card stat-approved">
+    <div class="stat-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <div class="stat-info">
+      <span class="stat-label">Approved</span>
+      <span class="stat-value">{{ countData.Approved }}</span>
+    </div>
+    <div class="stat-trend">
+      <i class="fas fa-thumbs-up"></i>
+    </div>
+  </div>
+
+  <div class="stat-card stat-rejected">
+    <div class="stat-icon">
+      <i class="fas fa-times-circle"></i>
+    </div>
+    <div class="stat-info">
+      <span class="stat-label">Rejected</span>
+      <span class="stat-value">{{ countData.Rejected }}</span>
+    </div>
+    <div class="stat-trend">
+      <i class="fas fa-ban"></i>
+    </div>
   </div>
 </div>
 
+<div class="dashboard-charts" *ngIf="countData">
+  <div class="chart-card">
+    <div class="chart-header">
+      <h6>Request Distribution</h6>
+    </div>
+    <div class="chart-body">
+      <div class="donut-chart-container">
+        <svg viewBox="0 0 200 200" class="donut-chart">
+          <circle cx="100" cy="100" r="70" fill="none" stroke="#e2e8f0" stroke-width="20" />
+          <circle cx="100" cy="100" r="70" fill="none"
+                  stroke="#f6c23e" stroke-width="20"
+                  [attr.stroke-dasharray]="getPendingDash()"
+                  stroke-dashoffset="0"
+                  transform="rotate(-90 100 100)"
+                  class="donut-segment" />
+          <circle cx="100" cy="100" r="70" fill="none"
+                  stroke="#38a169" stroke-width="20"
+                  [attr.stroke-dasharray]="getApprovedDash()"
+                  [attr.stroke-dashoffset]="getApprovedOffset()"
+                  transform="rotate(-90 100 100)"
+                  class="donut-segment" />
+          <circle cx="100" cy="100" r="70" fill="none"
+                  stroke="#e53e3e" stroke-width="20"
+                  [attr.stroke-dasharray]="getRejectedDash()"
+                  [attr.stroke-dashoffset]="getRejectedOffset()"
+                  transform="rotate(-90 100 100)"
+                  class="donut-segment" />
+          <text x="100" y="95" text-anchor="middle" class="donut-total">{{ countData.Pending + countData.Approved + countData.Rejected }}</text>
+          <text x="100" y="115" text-anchor="middle" class="donut-label">Total</text>
+        </svg>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-color" style="background: #f6c23e;"></span>
+            <span class="legend-text">Pending ({{ countData.Pending }})</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color" style="background: #38a169;"></span>
+            <span class="legend-text">Approved ({{ countData.Approved }})</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color" style="background: #e53e3e;"></span>
+            <span class="legend-text">Rejected ({{ countData.Rejected }})</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-header">
+      <h6>Status Overview</h6>
+    </div>
+    <div class="chart-body">
+      <div class="bar-chart-container">
+        <div class="bar-item">
+          <div class="bar-label">Pending</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-pending" [style.width.%]="getPercentage(countData.Pending)"></div>
+          </div>
+          <div class="bar-value">{{ countData.Pending }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label">Approved</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-approved" [style.width.%]="getPercentage(countData.Approved)"></div>
+          </div>
+          <div class="bar-value">{{ countData.Approved }}</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-label">Rejected</div>
+          <div class="bar-track">
+            <div class="bar-fill bar-rejected" [style.width.%]="getPercentage(countData.Rejected)"></div>
+          </div>
+          <div class="bar-value">{{ countData.Rejected }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

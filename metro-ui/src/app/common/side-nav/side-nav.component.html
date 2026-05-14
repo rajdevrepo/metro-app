@@ -1,39 +1,29 @@
-<!--<nav class="sidebar" [class.expanded]="isSidebarExpanded">
-  <ul class="menu">
-    <li *ngFor="let item of menuItems" class="menu-item">
-      <div class="menu-title" (click)="toggleSubMenu(item)">
-        <i [class]="item.icon"></i>
-        <span>{{ item.title }}</span>
-        <i class="arrow" [class.rotate]="item.expanded"></i>
-      </div>
-      <ul class="submenu" *ngIf="item.expanded">
-        <li *ngFor="let sub of item.submenu">
-          <i [class]="sub.icon"></i>
-          <a [routerLink]="sub.route">{{ sub.title }}</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>-->
 <nav class="sidebar" [class.expanded]="isSidebarExpanded">
-  <div class="d-flex justify-content-between divider">
-    <div class="image-container">
-      <img src="/assets/images/sidebar_logo.png"
-           alt="..." />
+  <div class="sidebar-header">
+    <div class="brand-area">
+      <div class="image-container">
+        <img src="/assets/images/metro_logo.png" alt="CMRL" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">CMRL</div>
+        <div class="brand-sub">Work Request System</div>
+      </div>
     </div>
-    <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+    <button class="toggle-btn" (click)="toggleSidebar()">
+      <i class="fas" [ngClass]="isSidebarExpanded ? 'fa-angle-right' : 'fa-bars'"></i>
+    </button>
   </div>
-  
+
   <ul class="menu">
-    <li *ngFor="let item of menuItems" class="menu-item">
+    <li *ngFor="let item of menuItems" class="menu-item" [class.active-item]="isMenuActive(item)">
       <div class="menu-title" (click)="toggleSubMenu(item)">
         <i [class]="item.icon"></i>
-        <span *ngIf="!item.collapsible" [routerLink]="item.route" style="padding-right:10px !important;">{{ item.title }}</span>
-        <span *ngIf="item.collapsible" style="padding-right:10px !important;">{{ item.title }}</span>
+        <span *ngIf="!item.collapsible" [routerLink]="item.route">{{ item.title }}</span>
+        <span *ngIf="item.collapsible">{{ item.title }}</span>
         <i *ngIf="item.collapsible" class="arrow fa fa-angle-right" [class.rotate]="item.expanded"></i>
       </div>
       <ul class="submenu" *ngIf="item.expanded">
-        <li *ngFor="let sub of item.submenu">
+        <li *ngFor="let sub of item.submenu" [class.active-sub]="isSubMenuActive(sub)">
           <i aria-hidden="true" [class]="sub.icon"></i>
           <a [routerLink]="sub.route">{{ sub.title }}</a>
         </li>

@@ -1,5 +1,5 @@
-import { Component, Inject, PLATFORM_ID, ChangeDetectorRef, NgZone, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, Inject, PLATFORM_ID, ChangeDetectorRef, NgZone, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from "@angular/common/http";
 import { AgGridAngular } from "ag-grid-angular";
@@ -32,41 +32,41 @@ ModuleRegistry.registerModules([
   PaginationModule,
   CsvExportModule,
   ClientSideRowModelModule,
-  ValidationModule /* Development Only */,
+  ValidationModule,
 ]);
+
+const SESSION_TIMEOUT_MS = 10 * 60 * 1000;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'metro-app';
   isSidebarOpen = false;
   loading = false;
+  showUserDropdown = false;
+  loggedInUser = 'Admin User';
 
   expandedMenus: { [key: string]: boolean } = { dashboard: false, settings: false };
   activeMenu: string = 'home';
 
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: any, private loaderService: LoaderService, private cdRef: ChangeDetectorRef, private ngZone: NgZone) {
-    if (isPlatformBrowser(this.platformId)) {
-      console.log('Window width:', window.innerWidth); // ✅ Safe in SSR
-    }
-    //this.loaderService.isLoading$.subscribe(isLoading => this.loading = isLoading);
-    //this.loaderService.isLoading$.subscribe(isLoading => {
-    //  this.loading = isLoading;
-    //  this.cdRef.detectChanges(); // Force Angular to detect changes
-    //});
-    //this.loaderService.isLoading$.subscribe(isLoading => {
-    //  this.ngZone.run(() => {
-    //    this.loading = isLoading; // Update loading state inside NgZone.run()
-    //    this.cdRef.detectChanges(); // Ensure change detection is triggered
-    //  });
-    //});    
+  private sessionTimer: any;
+  private isBrowser: boolean;
+
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: any,
+    private loaderService: LoaderService,
+    private cdRef: ChangeDetectorRef,
+    private ngZone: NgZone
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   isLoginPage(): boolean {
-    return this.router.url === '/login'; // Hide layout when on login page
+    return this.router.url === '/login' || this.router.url === '/';
   }
 
   toggleSidebar() {
@@ -74,18 +74,81 @@ export class AppComponent implements OnInit {
   }
 
   toggleSubMenu(menu: string) {
-    this.expandedMenus[menu] = !this.expandedMenus[menu]; // ✅ Use bracket notation
+    this.expandedMenus[menu] = !this.expandedMenus[menu];
   }
 
   setActiveMenu(menu: string) {
     this.activeMenu = menu;
   }
+
+  toggleUserDropdown(event: Event) {
+    event.stopPropagation();
+    this.showUserDropdown = !this.showUserDropdown;
+  }
+
+  logout() {
+    this.showUserDropdown = false;
+    this.clearSessionTimer();
+    if (this.isBrowser) {
+      localStorage.removeItem('sidebarState');
+      localStorage.removeItem('loginUser');
+    }
+    this.router.navigate(['/login']);
+  }
+
+  @HostListener('document:click')
+  onDocumentClick() {
+    this.showUserDropdown = false;
+    this.resetSessionTimer();
+  }
+
+  @HostListener('document:mousemove')
+  @HostListener('document:keypress')
+  resetSessionTimer() {
+    if (this.isBrowser && !this.isLoginPage()) {
+      this.clearSessionTimer();
+      this.ngZone.runOutsideAngular(() => {
+        this.sessionTimer = setTimeout(() => {
+          this.ngZone.run(() => {
+            alert('Your session has expired due to inactivity. You will be redirected to the login page.');
+            this.logout();
+          });
+        }, SESSION_TIMEOUT_MS);
+      });
+    }
+  }
+
+  private clearSessionTimer() {
+    if (this.sessionTimer) {
+      clearTimeout(this.sessionTimer);
+      this.sessionTimer = null;
+    }
+  }
+
   ngOnInit() {
     this.loaderService.isLoading$.subscribe(isLoading => {
       setTimeout(() => {
         this.loading = isLoading;
-        this.cdRef.detectChanges(); // Trigger change detection after the state change
+        this.cdRef.detectChanges();
       });
     });
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.showUserDropdown = false;
+      }
+    });
+
+    if (this.isBrowser) {
+      const savedUser = localStorage.getItem('loginUser');
+      if (savedUser) {
+        this.loggedInUser = savedUser;
+      }
+      this.resetSessionTimer();
+    }
+  }
+
+  ngOnDestroy() {
+    this.clearSessionTimer();
   }
 }

@@ -1,0 +1,118 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Work Completion</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Approved Work Requests</li>
+  </ol>
+</nav>
+
+<div class="card mt-1" *ngIf="!showDetail">
+  <div class="card-body">
+    <h6 class="card-title">
+      <i class="fas fa-tasks" style="margin-right: 8px; color: #0077b6;"></i>
+      Approved Work Requests - Completion Status
+    </h6>
+    <div *ngIf="gridOptions">
+      <ag-grid-angular style="width: 100%; height: 100%;"
+                       class="ag-theme-alpine"
+                       [rowData]="rowData"
+                       [columnDefs]="columnDefs"
+                       [gridOptions]="gridOptions">
+      </ag-grid-angular>
+    </div>
+    <div *ngIf="rowData.length === 0" class="empty-state">
+      <i class="fas fa-inbox"></i>
+      <p>No approved work requests found.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-1" *ngIf="showDetail && selectedRequest">
+  <div class="card-body">
+    <div class="detail-header">
+      <h6 class="card-title">
+        <i class="fas fa-file-alt" style="margin-right: 8px; color: #0077b6;"></i>
+        Work Request Details
+      </h6>
+      <button class="btn btn-outline-secondary btn-sm" (click)="closeDetail()">
+        <i class="fas fa-arrow-left" style="margin-right: 5px;"></i> Back to List
+      </button>
+    </div>
+
+    <div class="detail-section">
+      <h6 class="section-title">Station Information</h6>
+      <div class="detail-grid">
+        <div class="detail-item">
+          <label>Station Name</label>
+          <span>{{ selectedRequest.StattionName || selectedRequest.StationName || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Work Date</label>
+          <span>{{ selectedRequest.WorkDate || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Application ID</label>
+          <span>{{ selectedRequest.ApplicationId || '-' }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h6 class="section-title">Requester Information</h6>
+      <div class="detail-grid">
+        <div class="detail-item">
+          <label>Employee Name</label>
+          <span>{{ selectedRequest.EmployeeName || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Employee Code</label>
+          <span>{{ selectedRequest.EmployeeCode || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Designation</label>
+          <span>{{ selectedRequest.Designation || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Department</label>
+          <span>{{ selectedRequest.Department || '-' }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h6 class="section-title">Work Details</h6>
+      <div class="detail-grid">
+        <div class="detail-item">
+          <label>Required Permission</label>
+          <span>{{ selectedRequest.RequiredPermission || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Hours From</label>
+          <span>{{ selectedRequest.HoursFrom || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Hours To</label>
+          <span>{{ selectedRequest.HoursTo || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>No. of CMRL Staff</label>
+          <span>{{ selectedRequest.NooOfCMRLStaff || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>No. of Contract Staff</label>
+          <span>{{ selectedRequest.NooOfContratStaff || '-' }}</span>
+        </div>
+        <div class="detail-item">
+          <label>Contact No</label>
+          <span>{{ selectedRequest.ContactNo || '-' }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section" *ngIf="selectedRequest.Status">
+      <h6 class="section-title">Status</h6>
+      <div class="status-badge approved">
+        <i class="fas fa-check-circle"></i> Approved
+      </div>
+    </div>
+  </div>
+</div>

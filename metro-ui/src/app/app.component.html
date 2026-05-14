@@ -1,65 +1,46 @@
 <div *ngIf="!isLoginPage()">
-  <!--<app-header></app-header>--> <!-- Navbar/Header -->
-  <!--<app-sidebar></app-sidebar>--> <!-- Sidebar -->
   <div class="wrapper">
-    <!-- Sidebar -->    
-    <!--<nav id="sidebar" [class.active]="isSidebarOpen">
-      <div class="sidebar-header">
-        <h3>My Dashboard</h3>
-        <button (click)="toggleSidebar()">☰</button>
-      </div>
-      <ul class="list-unstyled components">
-        <li [class.active]="activeMenu === 'home'" (click)="setActiveMenu('home')">
-          <a routerLink="/">🏠 Home</a>
-        </li>
-        <li>
-          <a href="#" (click)="toggleSubMenu('dashboard')">📊 Dashboard</a>
-          <ul [class.show]="expandedMenus['dashboard']">
-            <li [class.active]="activeMenu === 'analytics'" (click)="setActiveMenu('analytics')">
-              <a routerLink="/analytics">📈 Analytics</a>
-            </li>
-            <li [class.active]="activeMenu === 'reports'" (click)="setActiveMenu('reports')">
-              <a routerLink="/reports">📄 Reports</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a (click)="toggleSubMenu('settings')">⚙️ Settings</a>
-          <ul [class.show]="expandedMenus['settings']">
-            <li [class.active]="activeMenu === 'profile'" (click)="setActiveMenu('profile')">
-              <a routerLink="/add-new">👤 Profile</a>
-            </li>
-            <li [class.active]="activeMenu === 'preferences'" (click)="setActiveMenu('preferences')">
-              <a routerLink="/preferences">🔧 Preferences</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>-->
     <app-side-nav></app-side-nav>
-    <!-- Content -->
-    <div id="content" style="background-color: #f6f8fa !important; ">
-      <!-- Top Navigation Bar -->
+    <div id="content">
       <nav class="top-navbar">
-        <!--<button class="menu-toggle" (click)="toggleSidebar()">☰</button>-->
-        <div class="col-3">
-          <label class="visually-hidden" for="inlineFormInputGroupUsername">Serach for</label>
-          <div class="input-group">
-            <input type="text"
-                   class="form-control"
-                   id="inlineFormInputGroupUsername"
-                   placeholder="Search for" />
-            <div class="input-group-text btn-sm" style="background-color: #3b71ca; box-shadow: 0 4px 9px -4px #3b71ca; color: #fff; box-shadow-state: 0 8px 9px -4px rgba(59, 113, 202, 0.3), 0 4px 18px 0 rgba(59, 113, 202, 0.2); "><i class="fas fa-search"></i></div>
+        <div class="navbar-left">
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search..." />
           </div>
         </div>
-        <div class="nav-icons">
-          <i class="fas fa-bell fa-4x"></i>
-          <i class="fas fa-user-circle fa-10x"></i>
+        <div class="navbar-right">
+          <div class="nav-item notification-bell">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </div>
+          <div class="nav-divider"></div>
+          <div class="user-info" [class.show-dropdown]="showUserDropdown" (click)="toggleUserDropdown($event)">
+            <div class="user-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-details">
+              <span class="user-name">{{ loggedInUser }}</span>
+              <span class="user-role">Administrator</span>
+            </div>
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+            <div class="user-dropdown" *ngIf="showUserDropdown" (click)="$event.stopPropagation()">
+              <a class="dropdown-item" routerLink="/settings/profile">
+                <i class="fas fa-user"></i> My Profile
+              </a>
+              <a class="dropdown-item" routerLink="/settings/preferences">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item logout-item" (click)="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </div>
         </div>
       </nav>
 
-      <!-- Main Content Area -->
-      <div class="main-content" style="padding:10px;">
+      <div class="main-content">
         <app-loader [isLoading]="loading"></app-loader>
         <router-outlet></router-outlet>
       </div>
@@ -69,5 +50,3 @@
 <div *ngIf="isLoginPage()">
   <app-login></app-login>
 </div>
-
-

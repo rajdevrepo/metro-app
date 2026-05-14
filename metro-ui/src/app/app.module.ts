@@ -42,6 +42,7 @@ import { LoaderComponent } from './common/loader/loader.component';
 import { SideNavComponent } from './common/side-nav/side-nav.component';
 import { DashboardComponent } from './common/dashboard/dashboard.component';
 import { ApprovedListComponent } from './request-management/approved-list/approved-list.component';
+import { WorkCompletionComponent } from './work-completion/work-completion.component';
 
 
 const routes: Routes = [
@@ -53,6 +54,7 @@ const routes: Routes = [
   { path: 'sidenav', component: SideNavComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'approved-list', component: ApprovedListComponent },
+  { path: 'work-completion', component: WorkCompletionComponent },
   { path: '**', redirectTo: 'login' } // Redirect invalid URLs to login
 ];
 
@@ -66,7 +68,8 @@ const routes: Routes = [
     LoaderComponent,
     SideNavComponent,
     DashboardComponent,
-    ApprovedListComponent
+    ApprovedListComponent,
+    WorkCompletionComponent
   ],
   imports: [
     BrowserModule,
