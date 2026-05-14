@@ -137,6 +137,20 @@ $divider-color: rgba(255, 255, 255, 0.1);
               color: #fff;
             }
           }
+
+          &.active-sub {
+            background: $active-bg;
+
+            i {
+              opacity: 1;
+              color: $active-border;
+            }
+
+            a {
+              color: #fff;
+              font-weight: 500;
+            }
+          }
         }
       }
     }

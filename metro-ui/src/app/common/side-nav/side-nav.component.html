@@ -15,7 +15,7 @@
   </div>
 
   <ul class="menu">
-    <li *ngFor="let item of menuItems" class="menu-item">
+    <li *ngFor="let item of menuItems" class="menu-item" [class.active-item]="isMenuActive(item)">
       <div class="menu-title" (click)="toggleSubMenu(item)">
         <i [class]="item.icon"></i>
         <span *ngIf="!item.collapsible" [routerLink]="item.route">{{ item.title }}</span>
@@ -23,7 +23,7 @@
         <i *ngIf="item.collapsible" class="arrow fa fa-angle-right" [class.rotate]="item.expanded"></i>
       </div>
       <ul class="submenu" *ngIf="item.expanded">
-        <li *ngFor="let sub of item.submenu">
+        <li *ngFor="let sub of item.submenu" [class.active-sub]="isSubMenuActive(sub)">
           <i aria-hidden="true" [class]="sub.icon"></i>
           <a [routerLink]="sub.route">{{ sub.title }}</a>
         </li>

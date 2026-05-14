@@ -1,5 +1,7 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,8 +9,9 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './side-nav.component.scss'
 })
 export class SideNavComponent {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private router: Router) { }
   isSidebarExpanded: boolean = false;
+  currentUrl: string = '';
   menuItems = [
     {
       title: 'Dashboard',
@@ -53,9 +56,41 @@ export class SideNavComponent {
 
 
   ngOnInit() {
+    this.currentUrl = this.router.url;
+    this.expandActiveParent();
+
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.currentUrl = event.urlAfterRedirects;
+      this.expandActiveParent();
+    });
+
     if (isPlatformBrowser(this.platformId)) {
       if (localStorage.getItem('sidebarState')) { localStorage.removeItem('sidebarState'); }
       this.loadMenuState();
+    }
+  }
+
+  isMenuActive(item: any): boolean {
+    if (item.route && !item.collapsible) {
+      return this.currentUrl === item.route;
+    }
+    if (item.submenu && item.submenu.length > 0) {
+      return item.submenu.some((sub: any) => this.currentUrl === sub.route);
+    }
+    return false;
+  }
+
+  isSubMenuActive(sub: any): boolean {
+    return this.currentUrl === sub.route;
+  }
+
+  private expandActiveParent() {
+    for (const item of this.menuItems) {
+      if (item.collapsible && item.submenu.some((sub: any) => this.currentUrl === sub.route)) {
+        item.expanded = true;
+      }
     }
   }
   toggleSubMenu(item: any) {
